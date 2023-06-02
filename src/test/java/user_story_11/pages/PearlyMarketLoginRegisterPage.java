@@ -1,12 +1,12 @@
-package user_story_9.pages;
+package user_story_11.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import user_story_9.utilities.Driver;
+import utilities.Driver;
 
-public class PearlyMarketLoginPage {
-    public PearlyMarketLoginPage(){
+public class PearlyMarketLoginRegisterPage {
+    public PearlyMarketLoginRegisterPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -17,16 +17,29 @@ public class PearlyMarketLoginPage {
     public WebElement becomeAVendorLink;
 
     @FindBy(id = "user_email")
-    public WebElement email;
+    public WebElement registerEmail;
     @FindBy(xpath = "//input[@placeholder='Verification Code']")
     public WebElement verificationCode;
     @FindBy(id = "passoword")
-    public WebElement password;
+    public WebElement registerPassword;
     @FindBy(id = "confirm_pwd")
     public WebElement confirmPassword;
     @FindBy(id = "wcfm_membership_register_button")
     public WebElement registerButton;
+    @FindBy(xpath = "//div//span[@class='wcicon-status-cancelled']")
+    public WebElement errorMessage_registeredEmail;
 
+    @FindBy(xpath = "//a//span[.='Sign In']")
+    public WebElement signInLink;
+
+    @FindBy(id = "username")
+    public WebElement username;
+
+    @FindBy(id = "password")
+    public WebElement userPassword;
+
+    @FindBy(xpath = "//button[@value='Sign In']")
+    public WebElement signInButton;
 
 
 

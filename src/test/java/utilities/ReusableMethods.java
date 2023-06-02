@@ -1,4 +1,4 @@
-package user_story_9.utilities;
+package utilities;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;

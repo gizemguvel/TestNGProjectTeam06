@@ -1,4 +1,4 @@
-package user_story_9.utilities;
+package utilities;
 
 import org.apache.poi.ss.usermodel.*;
 import org.testng.Assert;
