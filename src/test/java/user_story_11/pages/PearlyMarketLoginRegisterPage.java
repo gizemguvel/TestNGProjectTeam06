@@ -18,13 +18,16 @@ public class PearlyMarketLoginRegisterPage {
 
     @FindBy(id = "user_email")
     public WebElement registerEmail;
+
+    @FindBy(xpath = "//*[@id='wcfm_membership_registration_form_expander']/div[2]")
+    public WebElement verificationCodeMessage;
     @FindBy(xpath = "//input[@placeholder='Verification Code']")
     public WebElement verificationCode;
     @FindBy(id = "passoword")
     public WebElement registerPassword;
     @FindBy(id = "confirm_pwd")
     public WebElement confirmPassword;
-    @FindBy(id = "wcfm_membership_register_button")
+    @FindBy(xpath = "//input[@name='save-data']")
     public WebElement registerButton;
     @FindBy(xpath = "//div//span[@class='wcicon-status-cancelled']")
     public WebElement errorMessage_registeredEmail;

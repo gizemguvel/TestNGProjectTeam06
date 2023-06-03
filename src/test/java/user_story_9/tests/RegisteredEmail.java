@@ -1,6 +1,5 @@
 package user_story_9.tests;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WindowType;
 import org.testng.annotations.Test;
@@ -43,7 +42,7 @@ public class RegisteredEmail extends ExtentReportsBase {
         Driver.getDriver().findElement(By.xpath("(//nav//ul//li)[2]//a")).click();
         Driver.getDriver().findElement(By.xpath("//input[@type='email']")).sendKeys("gguvel@hotmail.com");
         Driver.getDriver().findElement(By.xpath("//input[@type='submit']")).click();
-        Driver.getDriver().findElement(By.xpath("//input[@type='password']")).sendKeys(excelUtils.getCellData(2,0));
+        WaitUtils.waitForVisibility(By.xpath("//input[@type='password']"),5).sendKeys(excelUtils.getCellData(2,0));
         Driver.getDriver().findElement(By.id("idSIButton9")).click();
         Driver.getDriver().findElement(By.id("idBtn_Back")).click();
 //        Get the verification code from your e-mail

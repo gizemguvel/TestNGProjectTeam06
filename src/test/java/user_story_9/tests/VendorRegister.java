@@ -1,7 +1,5 @@
 package user_story_9.tests;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WindowType;
 import org.testng.annotations.Test;
@@ -9,7 +7,6 @@ import user_story_9.pages.PearlyMarketLoginRegisterPage;
 import utilities.*;
 
 import java.io.IOException;
-import java.io.ObjectInputFilter;
 
 public class VendorRegister extends ExtentReportsBase {
     ExcelUtils excelUtils;
@@ -30,12 +27,12 @@ public class VendorRegister extends ExtentReportsBase {
         pearlyMarketLoginRegisterPage.registerLink.click();
 //        Click on Become a Vendor
         pearlyMarketLoginRegisterPage.becomeAVendorLink.click();
-       // extentTest.pass("register as a vendor");
+        // extentTest.pass("register as a vendor");
         MediaUtils.takeScreenshotOfTheEntirePageAsString();
 //        Enter the email
         pearlyMarketLoginRegisterPage.registerEmail.sendKeys("gizem_1206@hotmail.com");
         pearlyMarketLoginRegisterPage.verificationCode.click();
-       // extentTest.pass("Verification code sent to your email is visible");
+        // extentTest.pass("Verification code sent to your email is visible");
 //        Verify that “Verification code sent to your email: guvelg@gmail.com.” is visible
         WaitUtils.waitForVisibility(pearlyMarketLoginRegisterPage.verificationCodeMessage,3);
         ReusableMethods.verifyElementDisplayed(pearlyMarketLoginRegisterPage.verificationCodeMessage);
@@ -61,7 +58,7 @@ public class VendorRegister extends ExtentReportsBase {
         pearlyMarketLoginRegisterPage.verificationCode.sendKeys(verificationCode);
         MediaUtils.takeScreenshotOfTheEntirePageAsString();
 
-       // extentTest.pass("entering password");
+        // extentTest.pass("entering password");
 //        Enter password and confirm password(password should contain uppercase, lowercase, digit and special character)
         pearlyMarketLoginRegisterPage.registerPassword.sendKeys(ConfigReader.getProperty("vendor_password"));
         pearlyMarketLoginRegisterPage.confirmPassword.sendKeys(ConfigReader.getProperty("vendor_password"));
