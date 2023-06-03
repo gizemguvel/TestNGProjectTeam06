@@ -79,6 +79,10 @@ public class VendorRegister extends ExtentReportsBase {
         //extentTest.pass("completing registration");
 //        Click on Register to complete registration as a vendor
         JSUtils.clickWithTimeoutByJS(pearlyMarketLoginRegisterPage.registerButton);
+
+//       Assert that "Welcome to Pearly Market!" message is displayed
+        WaitUtils.waitForVisibility(By.xpath("//h1[.='Welcome to Pearly Market!'] "),5);
+
         MediaUtils.takeScreenshotOfTheEntirePageAsString();
         Driver.closeDriver();
     }

@@ -47,7 +47,7 @@ public class MediaUtils {
         File image = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.FILE);
         //        2. Create a path to save the image
         //        Create a date for giving dynamic name otherwise the screenshots overrides
-        String now = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());//getting local date in this format
+        String now = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());//getting local date in this format
         //                     CURRENT PROJECT FOLDER         foldername   subfoldername imagename
         String path = System.getProperty("user.dir")+"/test-output/Reports/Screenshots/"+now+"image.png";
         //        3. Save the image in the path as a file
