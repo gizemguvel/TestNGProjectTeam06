@@ -44,4 +44,8 @@ public abstract class ExtentReportsBase {
 //        generate the report
         extentReports.flush();
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main
