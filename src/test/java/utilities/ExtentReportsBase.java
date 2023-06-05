@@ -43,9 +43,5 @@ public abstract class ExtentReportsBase {
     public static void tearDownClass(){
 //        generate the report
         extentReports.flush();
-    }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> main
+    }}
+
